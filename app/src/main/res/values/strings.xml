@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ExampleApp</string>
+    <string name="text_good_morning">Good Morning!</string>
+    <string name="button_click">Click!</string>
+    <string name="text_subactivity">SubActivity</string>
+    <string name="button_start_sub_activity">Start Sub Activity!</string>
+</resources>

@@ -5,4 +5,5 @@
     <string name="text_subactivity">SubActivity</string>
     <string name="button_start_sub_activity">Start Sub Activity!</string>
     <string name="button_submit">Submit!</string>
+    <string name="text_icon_image">icon image</string>
 </resources>

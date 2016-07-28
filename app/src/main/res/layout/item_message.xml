@@ -39,8 +39,8 @@
                 android:layout_margin="4dp"
                 android:gravity="center_vertical"
                 android:singleLine="true"
-                android:textColor="#888"
-                android:text="user id" />
+                android:text="user id"
+                android:textColor="#888" />
 
         </LinearLayout>
 
@@ -50,6 +50,13 @@
             android:layout_height="wrap_content"
             android:padding="4dp"
             android:text="tweet body" />
+
+        <TextView
+            android:id="@+id/item_tweet_date_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="end"
+            android:text="date" />
 
     </LinearLayout>
 

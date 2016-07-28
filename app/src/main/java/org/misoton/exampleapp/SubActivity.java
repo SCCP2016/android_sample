@@ -13,6 +13,7 @@ import android.widget.EditText;
 import android.widget.ListView;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class SubActivity extends AppCompatActivity implements View.OnClickListener {
@@ -32,6 +33,7 @@ public class SubActivity extends AppCompatActivity implements View.OnClickListen
         // メッセージを管理するArrayAdapterを生成してListViewに設定
         List<Message> messageList = new ArrayList<>();
         messageAdapter = new MessageListAdapter(this, 0, messageList);
+                           //ArrayAdapter<String>
         messageListView.setAdapter(messageAdapter);
 
         // メッセージを入力するEditText
@@ -60,7 +62,8 @@ public class SubActivity extends AppCompatActivity implements View.OnClickListen
                 Bitmap tanukiBitmap = BitmapFactory.decodeResource(r, R.drawable.tanuki);
 
                 // メッセージを生成
-                Message message = new Message("defaultId", "defaultName", messageText, tanukiBitmap);
+                String date = new Date(System.currentTimeMillis()).toString();
+                Message message = new Message("defaultId", "defaultName", messageText, tanukiBitmap, date);
 
                 // メッセージをリストに追加
                 messageAdapter.add(message);

@@ -7,12 +7,14 @@ public class Message {
     private String userName;
     private String messageBody;
     private Bitmap icon;
+    private String date;
 
-    public Message(String userId, String userName, String messageBody, Bitmap icon) {
+    public Message(String userId, String userName, String messageBody, Bitmap icon, String date) {
         this.userId = userId;
         this.userName = userName;
         this.messageBody = messageBody;
         this.icon = icon;
+        this.date = date;
     }
 
     public String getUserId() {
@@ -29,5 +31,9 @@ public class Message {
 
     public Bitmap getIcon() {
         return icon;
+    }
+
+    public String getDate() {
+        return date;
     }
 }

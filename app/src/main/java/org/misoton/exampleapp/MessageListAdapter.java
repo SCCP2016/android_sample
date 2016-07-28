@@ -25,6 +25,7 @@ public class MessageListAdapter extends ArrayAdapter<Message> {
         TextView userIdText;
         TextView userNameText;
         TextView tweetBodyText;
+        TextView dateText;
     }
 
     // 各itemのViewの設定
@@ -43,7 +44,7 @@ public class MessageListAdapter extends ArrayAdapter<Message> {
             holder.userIdText = (TextView) convertView.findViewById(R.id.item_tweet_user_id_text);
             holder.userNameText = (TextView) convertView.findViewById(R.id.item_tweet_user_name_text);
             holder.tweetBodyText = (TextView) convertView.findViewById(R.id.item_tweet_body_text);
-
+            holder.dateText = (TextView) convertView.findViewById(R.id.item_tweet_date_text);
             convertView.setTag(holder);
         } else {
             holder = (ViewHolder) convertView.getTag();
@@ -54,7 +55,7 @@ public class MessageListAdapter extends ArrayAdapter<Message> {
         holder.userIdText.setText(item.getUserId());
         holder.userNameText.setText(item.getUserName());
         holder.tweetBodyText.setText(item.getMessageBody());
-
+        holder.dateText.setText(item.getDate());
         return convertView;
     }
 }

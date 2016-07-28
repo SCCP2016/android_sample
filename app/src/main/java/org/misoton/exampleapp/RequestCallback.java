@@ -4,6 +4,7 @@ import retrofit.Callback;
 import retrofit.RetrofitError;
 import retrofit.client.Response;
 
+// おまじない
 public class RequestCallback<T> implements Callback<T> {
 
     private RequestListener<T> mListener;

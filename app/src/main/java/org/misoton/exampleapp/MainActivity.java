@@ -59,15 +59,24 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             case R.id.main_tomorrow_weather_button:
                 RetroFitApi api = getRestApi();
+
+                // リクエスト用の値の準備
                 String location = "Aizuwakamatsu";
                 int count = 1;
                 String appId = "e8ff51846c54c3f0a02ed50d7184c466";
+
+                // リクエスト実行
                 api.daily(location, count, appId, new RequestCallback<Weather>(new RequestListener<Weather>() {
+                    // 正常にレスポンスが返ってきた時
                     @Override
                     public void onSuccess(Weather response) {
                         Toast.makeText(MainActivity.this, response.list.get(0).weather.get(0).main, Toast.LENGTH_LONG).show();
                     }
 
+                    // 正常にレスポンスが返ってこなかった時
+                    // 例）
+                    // アドレス(setEndpointで設定したものや、RetroFitApi.javaで設定したもの)が間違っている。
+                    // レスポンスをうまくJSONに変換できなかった（この場合Weatherに変換できなかった時）。
                     @Override
                     public void onFailure(RetrofitError error) {
                         Toast.makeText(MainActivity.this, "Failure", Toast.LENGTH_LONG).show();
